@@ -11,10 +11,13 @@
     <div class="wrapper">
       <div class="nav-wrapper">
         <nav>
-          <button>
+          <button class="open-menu">
             <img src="./assets/menu-close.svg" alt="" />
           </button>
           <ul class="nav-links">
+            <button class="close-menu">
+              <img src="./assets/close.svg" alt="" />
+            </button>
             <li>
               <a class="dropdown-btn" href="#">Home</a>
               <ul class="dropdown">
@@ -43,6 +46,7 @@
               </ul>
             </li>
           </ul>
+          <div class="void-menu"></div>
         </nav>
         <div class="logos">
           <img class="logo" src="./assets/logo.svg" alt="KeePass Info logo" />
@@ -55,13 +59,12 @@
       </div>
       <header>
         <div class="main-header">
-          <p>Free</p>
-          <p>Open Source</p>
-          <p>Light-weight</p>
-          <p>Easy-to-use</p>
+          <p>Free &amp; Open Source</p>
+          <!-- <p>Light-weight</p>
+          <p>Easy-to-use</p> -->
           <h1>Password Manager</h1>
           <div class="call-to-actions">
-            <a href="#">Get Keepass</a>
+            <a class="focus" href="#">Get Keepass</a>
             <a href="#">Awards</a>
           </div>
           <figure>
@@ -79,7 +82,7 @@
             <li>
               <article>
                 <header>
-                  <h3>Title</h3>
+                  <h3><a href="#">Title</a></h3>
                   <time datetime="2001-12-31:23:59">2001-12-31</time>
                 </header>
                 <p>
@@ -93,7 +96,8 @@
             <li>
               <article>
                 <header>
-                  <h3>Title</h3>
+                  <h3><a href="#">Title</a></h3>
+
                   <time datetime="2001-12-31:23:59">2001-12-31</time>
                 </header>
                 <p>
@@ -106,7 +110,7 @@
             <li>
               <article>
                 <header>
-                  <h3>Title</h3>
+                  <h3><a href="#">Title</a></h3>
                   <time datetime="2001-12-31:23:59">2001-12-31</time>
                 </header>
                 <p>
@@ -117,6 +121,7 @@
               </article>
             </li>
           </ul>
+          <a class="archive-btn" href="#">News Archive</a>
         </section>
         <section>
           <article class="about">
@@ -143,7 +148,7 @@
         </section>
       </main>
       <footer>
-        <p class="author">
+        <p class="quote">
           <i>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
             repellat nulla consequatur cumque inventore quis saepe laborum
@@ -155,9 +160,11 @@
             fugit asperiores commodi maxime, delectus vitae eaque illo impedit
             ullam ratione dolore!
           </i>
+          <br />
+          <a href="#" class="author">Lorem ipsum dolor sit amet consectetur.</a>
         </p>
         <div class="copyright">
-          <p>Copyright &copy; 2000-2024. Author</p>
+          <p>Copyright &copy; 2000-2024 Author</p>
           <ul>
             <li><a href="#"> Legal Contact </a></li>
             <li>
