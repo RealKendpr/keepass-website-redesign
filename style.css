@@ -3,40 +3,76 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --dark-neutral: #333;
+  --light-neutral: #eee;
+  --font-body: "Roboto", sans-serif;
+  --font-heading: "Roboto", sans-serif;
+}
 li {
   list-style: none;
 }
 a {
   text-decoration: none;
 }
-.main-header, main, footer {
-  margin-inline: 5%;
+.main-header,
+main,
+footer {
+  padding-inline: 5% !important;
+}
+.nav-wrapper {
+  min-width: 300px;
+  padding: 10px 25px;
+  background: var(--dark-neutral);
+  display: flex;
+  justify-content: space-between;
+}
+.logos {
+  display: flex;
+  gap: 1rem;
+}
+.logo {
+  width: 40px;
 }
 nav {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 25px;
-  background: black;
-}
-.logo {
-  width: 50px;
-}
-.nav-links {
-  display: none;
-  position: absolute;
+  font-family: var(--font-body);
+
+  & button {
+    border: 0;
+    outline: none;
+    background: transparent;
+
+    & img {
+      height: 40px;
+    }
+  }
+  & > ul {
+    /* display: none; */
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 50%;
+    min-width: 180px;
+
+    padding: 10px 20px;
+    line-height: 1.5;
+
+    background: var(--light-neutral);
+  }
 }
 .main-header {
-  margin-top: 100px;
-
+  margin-top: 80px;
 
   & p {
     font-size: 1.1rem;
     line-height: 1.5;
+    font-family: var(--font-body);
   }
   & h1 {
     font-size: 1.8rem;
+    font-family: var(--font-heading);
   }
   & figure {
     margin-top: 2rem;
@@ -49,6 +85,7 @@ nav {
   margin-top: 1rem;
   display: flex;
   gap: 1rem;
+  font-family: var(--font-body);
 
   & a {
     font-size: 1.3rem;
@@ -63,6 +100,16 @@ main {
 main section {
   display: grid;
   gap: 2rem;
+
+  & h2 {
+    font-family: var(--font-heading);
+  }
+  & h3 {
+    font-family: var(--font-heading);
+  }
+  & p {
+    font-family: var(--font-body);
+  }
 }
 .about {
   display: grid;
@@ -78,6 +125,7 @@ main section {
 
   & time {
     font-size: 0.8rem;
+    font-family: var(--font-body);
   }
   & p {
     font-size: 0.9rem;
@@ -90,20 +138,29 @@ main section {
 
 footer {
   margin-top: 80px;
-  padding-bottom: 50px;
+  padding: 50px 0;
   display: grid;
   gap: 1rem;
-}
+  background: #333;
+  color: var(--light-neutral);
 
-.copyright {
-  display: grid;
-  gap: .5rem;
-
-  & li {
-    line-height: 1.5;
+  & p {
+    font-family: var(--font-body);
   }
-}
-.author {
-  font-size: 0.8rem;
-  line-height: 1.3;
+  & a {
+    font-family: var(--font-body);
+  }
+
+  .copyright {
+    display: grid;
+    gap: 0.5rem;
+
+    & li {
+      line-height: 1.5;
+    }
+  }
+  .author {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
 }
