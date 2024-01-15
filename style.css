@@ -67,7 +67,6 @@ nav {
     position: absolute;
     top: 10px;
     right: 25px;
-
   }
 }
 .nav-links.openedMenu,
@@ -79,17 +78,17 @@ nav {
   border: 0;
   outline: none;
   background: transparent;
-
-  & img {
-    height: 40px;
-  }
+  font-size: 32px;
 
   & :hover {
     cursor: pointer;
+    color: rgba(11, 11, 11, 0.5);
   }
 }
 .dropdown {
   display: none;
+  padding: 10px;
+  background: hsl(0, 0%, 90%);
 }
 .dropdown-btn:hover .dropdown {
   display: block;
