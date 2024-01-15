@@ -42,28 +42,40 @@ footer {
 nav {
   /* position: relative; */
   font-family: var(--font-body);
+  & a:hover {
+    text-decoration: underline;
+    opacity: 0.7;
+  }
+}
+.nav-links {
+  position: relative;
+  z-index: 10;
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 70%;
+  min-width: 180px;
 
-  & .nav-links {
-    z-index: 10;
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 50%;
-    min-width: 180px;
+  padding: 50px 25px 10px;
+  line-height: 1.5;
 
-    padding: 10px 20px;
-    line-height: 1.5;
+  background: var(--light-neutral);
 
-    background: var(--light-neutral);
+  & .close-menu {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+
   }
 }
 .nav-links.openedMenu,
 .void-menu.openedMenu {
   display: block;
 }
-.open-menu {
+.open-menu,
+.close-menu {
   border: 0;
   outline: none;
   background: transparent;
@@ -75,6 +87,12 @@ nav {
   & :hover {
     cursor: pointer;
   }
+}
+.dropdown {
+  display: none;
+}
+.dropdown-btn:hover .dropdown {
+  display: block;
 }
 .void-menu {
   display: none;
@@ -126,6 +144,14 @@ nav {
     background-image: -ms-linear-gradient(top, #c5c9db, #dbe3f2);
     background-image: linear-gradient(to bottom, #c5c9db, #dbe3f2);
   }
+
+  & a:hover {
+    border-color: #333;
+    background-image: -webkit-linear-gradient(bottom, #c5c9db, #dbe3f2);
+    background-image: -moz-linear-gradient(bottom, #c5c9db, #dbe3f2);
+    background-image: -ms-linear-gradient(bottom, #c5c9db, #dbe3f2);
+    background-image: linear-gradient(to top, #c5c9db, #dbe3f2);
+  }
 }
 main {
   margin-top: 80px;
@@ -143,6 +169,10 @@ main section {
   & h3 {
     font-family: var(--font-heading);
     font-size: 1.4rem;
+    & :hover {
+      text-decoration: underline;
+      opacity: 0.7;
+    }
     & a {
       color: black;
     }
@@ -150,6 +180,10 @@ main section {
   & p {
     font-family: var(--font-body);
   }
+}
+.read-more-btn:hover {
+  text-decoration: underline;
+  opacity: 0.7;
 }
 .about {
   display: grid;
@@ -162,6 +196,7 @@ main section {
 .article-list article {
   display: grid;
   gap: 0.5rem;
+  max-width: 80%;
 
   & time {
     font-size: 0.8rem;
@@ -177,6 +212,11 @@ main section {
 }
 .archive-btn {
   font-family: var(--font-body);
+
+  &:hover {
+    text-decoration: underline;
+    opacity: 0.7;
+  }
 }
 
 footer {
@@ -192,6 +232,10 @@ footer {
   }
   & a {
     font-family: var(--font-body);
+    &:hover {
+      text-decoration: underline;
+      opacity: 0.7;
+    }
   }
   & a:hover {
     text-decoration: underline;
