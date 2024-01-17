@@ -15,3 +15,19 @@ voidMenu.addEventListener("click", () => {
   navLinks.classList.remove("openedMenu");
   voidMenu.classList.remove("openedMenu");
 });
+
+// const article = document.querySelectorAll(".article-list article > p");
+
+// for (let i = 0; i < article.length; i++) {
+//   const element = article[i];
+//   element.innerHTML = element.textContent + "&#x2009;";
+// }
+
+const navlinksWidth = navLinks.offsetWidth;
+const wrapper = document.getElementsByClassName("wrapper")[0];
+
+let wrapperMargin =
+  wrapper.currentStyle || window.getComputedStyle(wrapper).marginLeft;
+const wrappermarginNumber = parseInt(wrapperMargin);
+
+navLinks.style.setProperty("left", wrappermarginNumber - navlinksWidth + "px");
