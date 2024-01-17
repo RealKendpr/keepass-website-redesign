@@ -23,11 +23,22 @@ voidMenu.addEventListener("click", () => {
 //   element.innerHTML = element.textContent + "&#x2009;";
 // }
 
-const navlinksWidth = navLinks.offsetWidth;
 const wrapper = document.getElementsByClassName("wrapper")[0];
 
-let wrapperMargin =
-  wrapper.currentStyle || window.getComputedStyle(wrapper).marginLeft;
-const wrappermarginNumber = parseInt(wrapperMargin);
+function positionNav() {
+  const navlinksWidth = navLinks.offsetWidth;
 
-navLinks.style.setProperty("left", wrappermarginNumber - navlinksWidth + "px");
+  let wrapperMargin =
+    wrapper.currentStyle || window.getComputedStyle(wrapper).marginLeft;
+  const wrappermarginNumber = parseInt(wrapperMargin);
+  navLinks.style.setProperty(
+    "left",
+    wrappermarginNumber - navlinksWidth + "px"
+  );
+}
+
+window.addEventListener("resize", function (e) {
+  positionNav();
+});
+
+positionNav();
