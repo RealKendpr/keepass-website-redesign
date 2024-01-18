@@ -37,8 +37,6 @@ function positionNav() {
   );
 }
 
-window.addEventListener("resize", function (e) {
-  positionNav();
-});
+window.addEventListener("resize", positionNav);
 
 positionNav();
