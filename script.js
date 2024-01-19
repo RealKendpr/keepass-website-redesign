@@ -37,6 +37,11 @@ function positionNav() {
   );
 }
 
-window.addEventListener("resize", positionNav);
+window.addEventListener("resize", function () {
+  positionNav();
+
+  navLinks.classList.remove("openedMenu");
+  voidMenu.classList.remove("openedMenu");
+});
 
 positionNav();
