@@ -39,3 +39,5 @@ First this is my original redesign of the menu, it will have a dropdown on it, f
 So instead, I stick with the original design of their navigation bar, which is on the left-side, the one that looks like a sidebar.
 
 ##
+
+_Further changes will happen_
