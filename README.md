@@ -28,7 +28,7 @@ Also, I don't think that the KeePass website is very optimal in terms of design;
 
 ### The Redesign
 
-![](./Design/new-design/redesign-homepage.png)
+![](./Design/new-design/redesign_homepage.png)
 [**Site Livepreview**](https://RealKendpr.github.io/keepass-website-redesign)
 
 ### Some more
